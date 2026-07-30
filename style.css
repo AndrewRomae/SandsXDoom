@@ -1,0 +1,254 @@
+/* VARIABLES DE COR E ESTILO */
+:root {
+    /* Tons Bege / Tijolo Egípcio */
+    --bg-sand: #E8D8C8;
+    --bg-card: #F4ECE1;
+    --brick-orange: #C85A32;
+    
+    /* Vermelho e Roxo Harmonizados */
+    --crimson-red: #A8201A;
+    --dark-purple: #2A0845;
+    --purple-accent: #5C2751;
+    
+    /* Textos */
+    --text-dark: #1F1512;
+    --text-light: #F4ECE1;
+    
+    /* Fontes */
+    --font-title: 'Cinzel', serif;
+    --font-body: 'Roboto', sans-serif;
+  }
+  
+  /* RESET E ESTILOS GERAIS */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--bg-sand);
+    color: var(--text-dark);
+    font-family: var(--font-body);
+    line-height: 1.6;
+  }
+  
+  /* CONTAINERS E SEÇÕES */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+  }
+  
+  h1, h2, h3 {
+    font-family: var(--font-title);
+    color: var(--dark-purple);
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--brick-orange);
+    display: inline-block;
+    margin: 0 auto 2.5rem auto;
+  }
+  
+  .section {
+    text-align: center;
+  }
+  
+  /* NAVBAR RESPONSIVA */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-purple);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logo {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--bg-sand);
+    letter-spacing: 2px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-item {
+    color: var(--bg-sand);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-item:hover {
+    color: var(--brick-orange);
+  }
+  
+  /* MENU HAMBÚRGUER (MOBILE) */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--bg-sand);
+    margin: 3px 0;
+    transition: 0.3s;
+  }
+  
+  /* HERO SECTION */
+  .hero {
+    background: linear-gradient(135deg, rgba(42, 8, 69, 0.85), rgba(168, 32, 26, 0.75)), 
+                radial-gradient(circle, var(--brick-orange), var(--dark-purple));
+    color: var(--text-light);
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    color: var(--bg-sand);
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.7);
+    letter-spacing: 3px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+  
+  .tags-genero {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .tag {
+    background-color: var(--crimson-red);
+    color: var(--text-light);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+  
+  .btn-primary {
+    display: inline-block;
+    background-color: var(--brick-orange);
+    color: var(--text-light);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 2px solid var(--bg-sand);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--crimson-red);
+    transform: translateY(-2px);
+  }
+  
+  /* CARDS E GRIDS */
+  .card {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--purple-accent);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: left;
+  }
+  
+  .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .grid-cards .card {
+    border-left: none;
+    border-top: 5px solid var(--brick-orange);
+    transition: transform 0.3s;
+  }
+  
+  .grid-cards .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .highlight-card blockquote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--crimson-red);
+    border-left: 3px solid var(--brick-orange);
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* FOOTER */
+  .footer {
+    background-color: var(--dark-purple);
+    color: var(--bg-sand);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+  }
+  
+  /* RESPONSIVIDADE (MEDIA QUERIES) */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--dark-purple);
+      padding: 1rem 0;
+      text-align: center;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hero-title {
+      font-size: 2.3rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
