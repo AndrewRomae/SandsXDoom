@@ -1,85 +1,222 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sands X Doom - Site Oficial</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;900&family=Metamorphous&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO & Metadata -->
+    <title>Sands X Doom — Site Oficial do Jogo</title>
+    <meta name="description" content="Entre na misteriosa Pirâmide em Sands X Doom. Acompanhe Ivo em uma jornada sombria e enigmática para resgatar sua avó Imogen e desvendar rituais esquecidos.">
+    <meta name="keywords" content="Sands X Doom, SxD, Jogo Indie, Pirâmide, Ivo, Imogen, Game Dev">
+    <meta name="author" content="Sands X Doom Team">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sandsxdoom.com/">
+    <meta property="og:title" content="Sands X Doom — Site Oficial">
+    <meta property="og:description" content="Explore os mistérios da Pirâmide, criaturas bizarras e a busca de Ivo em Sands X Doom.">
+    <meta property="og:image" content="assets/backgrounds/hero-bg.jpg">
+
+    <!-- Favicon Placeholders -->
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="logo">SANDS X DOOM</div>
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <nav class="nav-links" id="navLinks">
-      <a href="#sinopse" class="nav-item">Sinopse</a>
-      <a href="#mecanicas" class="nav-item">Mecânicas</a>
-      <a href="#lore" class="nav-item">Lore</a>
-      <a href="#midia" class="nav-item">Mídia</a>
+    <!-- Navegação -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-text">SANDS <span class="accent">X</span> DOOM</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu de navegação">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#intro" class="nav-link">Introdução</a></li>
+                <li><a href="#lore" class="nav-link">Universo</a></li>
+                <li><a href="#characters" class="nav-link">Personagens</a></li>
+                <li><a href="#mechanics" class="nav-link">Mecânicas</a></li>
+            </ul>
+        </div>
     </nav>
-  </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">SANDS X DOOM</h1>
-      <p class="hero-subtitle">Sob as areias ancestrais, a ruína eterna desperta.</p>
+    <!-- HERO SECTION -->
+    <header id="hero" class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <h1 class="game-title">SANDS <span class="accent-title">X</span> DOOM</h1>
+            <p class="hero-tagline">Atravessar os salões esquecidos é o único caminho para reencontrar quem você ama.</p>
+            <div class="hero-actions">
+                <a href="#intro" class="btn btn-primary">Adentrar a Pirâmide</a>
+                <a href="#characters" class="btn btn-secondary">Conhecer Habitantes</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="mouse-icon"></span>
+            <span class="scroll-text">Role para explorar</span>
+        </div>
+    </header>
 
-      <div class="tags-genero">
-        <span class="tag">Roguelite</span>
-        <span class="tag">Ação 2D</span>
-        <span class="tag">Fantasia Obscura</span>
-      </div>
+    <!-- INTRODUÇÃO -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-text-block">
+                    <span class="section-subtitle">O Desaparecimento</span>
+                    <h2 class="section-title">Três dias de silêncio absoluto.</h2>
+                    <p class="paragraph">
+                        Imogen[cite: 1], a pessoa que Ivo mais ama no mundo, desapareceu sem deixar vestígios[cite: 1]. Para encontrá-la e trazê-la de volta para casa, o garoto decide cruzar os portões de uma Pirâmide antiga[cite: 1].
+                    </p>
+                    <p class="paragraph">
+                        O que começa como uma busca desesperada logo se transforma em uma imersão profunda em salões enigmáticos[cite: 1], habitados por criaturas com regras próprias e protegidos por uma sociedade oculta[cite: 1].
+                    </p>
+                </div>
+                <div class="intro-visual-card">
+                    <div class="image-frame">
+                        <img src="assets/backgrounds/intro-pyramid.jpg" alt="A entrada sombria da Pirâmide em Sands X Doom" class="responsive-img placeholder-asset">
+                        <div class="frame-caption">A Pirâmide oculta segredos que desafiam a própria gravidade[cite: 1].</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <a href="#sinopse" class="btn-primary">Descubra o Mistério</a>
-    </div>
-  </section>
+    <!-- UNIVERSO / LORE -->
+    <section id="lore" class="lore-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">A Bíblia da Pirâmide</span>
+                <h2 class="section-title">O Culto e os Rituais Ocultos</h2>
+            </div>
 
-  <section id="sinopse" class="section container">
-    <h2>Sinopse</h2>
-    <div class="card">
-      <p>Em <strong>Sands X Doom</strong>, você assume o papel do Último Guardião do Sol, aprisionado nas catacumbas esquecidas sob dunas infinitas. Para impedir que a corrupção do submundo consuma a Terra, é preciso empunhar relíquias proibidas, enfrentar hordas demoníacas e moldar a areia a seu favor.</p>
-    </div>
-  </section>
+            <div class="lore-cards-container">
+                <!-- Card 1: A Caixa da Avó -->
+                <article class="lore-card">
+                    <div class="lore-card-body">
+                        <span class="lore-badge">A Origem</span>
+                        <h3>A Caixa da Avó</h3>
+                        <p>
+                            Desde pequeno, Ivo esconde o próprio rosto[cite: 1]. Enquanto a maioria estranharia esse hábito, sua Avó nunca o reprimiu[cite: 1]. Ela foi a única a apoiá-lo e aceitá-lo exatamente como era[cite: 1].
+                        </p>
+                        <p>
+                            Como gesto de gratidão, Ivo construiu para ela uma caixa com rosto de falcão, no mesmo estilo da sua[cite: 1]. Imogen a carrega com orgulho — um símbolo vivo da ligação inquebrável entre os dois[cite: 1].
+                        </p>
+                    </div>
+                </article>
 
-  <section id="mecanicas" class="section container">
-    <h2>Mecânicas Principais</h2>
-    <div class="grid-cards">
-      <div class="card">
-        <h3>Alquimia das Areias</h3>
-        <p>Manipule o ambiente controlando o fluxo da areia para erguer barreiras ou afundar inimigos em poços sem fim.</p>
-      </div>
-      <div class="card">
-        <h3>Combate com Relíquias</h3>
-        <p>Combine artefatos de poder arcanos com habilidades de combate em tempo real para criar combinações devastadoras.</p>
-      </div>
-      <div class="card">
-        <h3>Masmorras Mutáveis</h3>
-        <p>A cada morte, as pirâmides e catacumbas se reconfiguram, garantindo uma experiência única em cada jogada.</p>
-      </div>
-    </div>
-  </section>
+                <!-- Card 2: A Sociedade da Pirâmide -->
+                <article class="lore-card">
+                    <div class="lore-card-body">
+                        <span class="lore-badge">A Seita</span>
+                        <h3>A Sociedade da Pirâmide</h3>
+                        <p>
+                            Escondida dos olhos dos visitantes comuns, existe uma sociedade secreta no interior da Pirâmide que preserva o culto aos antigos deuses egípcios[cite: 1]. Seus membros seguem rituais estritos e acreditam que as divindades ainda exercem força sobre aquele lugar[cite: 1].
+                        </p>
+                    </div>
+                </article>
 
-  <section id="lore" class="section container">
-    <h2>Lore e Universo</h2>
-    <div class="card highlight-card">
-      <blockquote>
-        "Quando o sol tombar atrás da grande pirâmide de Seth-Ankh, a areia não mais refletirá o ouro, mas o sangue dos antigos deuses."
-      </blockquote>
-      <p>A civilização de Khem-Ura prosperou durante milênios sob o olhar de deuses da luz. Porém, a ganância do Faraó Cego rasgou os selos do abismo subterrâneo, invocando o <em>Doom</em> — um mal antigo que consome a alma da terra e transforma a areia em cinza viva.</p>
-    </div>
-  </section>
+                <!-- Card 3: O Banquete Ritualístico -->
+                <article class="lore-card">
+                    <div class="lore-card-body">
+                        <span class="lore-badge">O Ritual</span>
+                        <h3>O Banquete Ceremonial</h3>
+                        <p>
+                            Grandes banquetes são organizados nos salões profundos[cite: 1]. Mas não se engane: a finalidade não é a celebração ou a nutrição dos participantes[cite: 1].
+                        </p>
+                        <p>
+                            A comida, a disposição dos assentos e cada detalhe da arquitetura fazem parte de uma vasta oferenda ritualística dedicada aos deuses cultuados pela sociedade[cite: 1].
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
-  <footer class="footer">
-    <p>&copy; 2026 Sands X Doom Indie Studio. Todos os direitos reservados.</p>
-  </footer>
+    <!-- PERSONAGENS -->
+    <section id="characters" class="characters-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Figuras & Criaturas</span>
+                <h2 class="section-title">Habitantes da Pirâmide</h2>
+                <p class="section-description">Selecione um habitante para inspecionar sua ficha original da Bíblia de Sands X Doom[cite: 1].</p>
+            </div>
 
-  <script src="script.js"></script>
+            <div class="character-selector-wrapper">
+                <!-- Selector Thumbnails -->
+                <div class="character-thumbs" id="characterThumbs" role="tablist">
+                    <!-- Gerado via JS ou renderizado direto -->
+                    <button class="thumb-btn active" data-char="ivo" role="tab" aria-selected="true">
+                        <span class="thumb-name">Ivo</span>
+                    </button>
+                    <button class="thumb-btn" data-char="sentinela" role="tab" aria-selected="false">
+                        <span class="thumb-name">Sentinela</span>
+                    </button>
+                    <button class="thumb-btn" data-char="nadia" role="tab" aria-selected="false">
+                        <span class="thumb-name">Nadia</span>
+                    </button>
+                    <button class="thumb-btn" data-char="prisma" role="tab" aria-selected="false">
+                        <span class="thumb-name">Prisma</span>
+                    </button>
+                    <button class="thumb-btn" data-char="mumias" role="tab" aria-selected="false">
+                        <span class="thumb-name">Múmias</span>
+                    </button>
+                    <button class="thumb-btn" data-char="imogen" role="tab" aria-selected="false">
+                        <span class="thumb-name">Imogen</span>
+                    </button>
+                </div>
+
+                <!-- Active Character Showcase Box -->
+                <div class="character-display-card" id="characterDisplay">
+                    <!-- O conteúdo é injetado via JS mantendo estritamente o conteúdo da Bíblia -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MECÂNICAS EM JOGO -->
+    <section id="mechanics" class="mechanics-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Sistemas e Interações</span>
+                <h2 class="section-title">Mecânicas da Pirâmide</h2>
+            </div>
+
+            <div class="mechanics-grid">
+                <div class="mechanic-card">
+                    <div class="key-badge">Tecla E</div>
+                    <h3>Inversão de Gravidade</h3>
+                    <p>Ivo utiliza ampulhetas especiais espalhadas pelos cenários para inverter a gravidade e transitar pelo teto dos salões[cite: 1].</p>
+                </div>
+                <div class="mechanic-card">
+                    <div class="key-badge">Tecla C</div>
+                    <h3>Miado Aleatório</h3>
+                    <p>Ivo solta um miado aleatório, refletindo seus hábitos e trejeitos felinos[cite: 1].</p>
+                </div>
+                <div class="mechanic-card">
+                    <div class="key-badge">Tecla Q</div>
+                    <h3>Libertação em Jarro</h3>
+                    <p>Ao encostar em um jarro e pressionar Q, Ivo abre a tampa e solta uma Nadia, que sobe em linha reta verticalmente para rachar blocos superiores com seu veneno[cite: 1].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>SANDS <span class="accent">X</span> DOOM</h2>
+                <p>Inspirado na Bíblia Audiovisual do Projeto[cite: 1]. Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-status">
+                <span class="status-indicator"></span> Projeto Independente em Desenvolvimento
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
