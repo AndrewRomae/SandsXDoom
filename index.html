@@ -3,220 +3,397 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO & Metadata -->
-    <title>Sands X Doom — Site Oficial do Jogo</title>
-    <meta name="description" content="Entre na misteriosa Pirâmide em Sands X Doom. Acompanhe Ivo em uma jornada sombria e enigmática para resgatar sua avó Imogen e desvendar rituais esquecidos.">
-    <meta name="keywords" content="Sands X Doom, SxD, Jogo Indie, Pirâmide, Ivo, Imogen, Game Dev">
-    <meta name="author" content="Sands X Doom Team">
+    <title>Sands X Doom — Site Oficial do Jogo Indie</title>
+    <meta name="description" content="Explore a misteriosa Pirâmide do Egito em Sands X Doom (SxD), um jogo 2D de plataforma, puzzles, exploração e estranheza atmosférica.">
+    <meta name="keywords" content="Sands X Doom, SxD, jogo indie, plataforma 2D, puzzle, piramide egito, Ivo, jogo de exploracao">
+    <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Facebook / WhatsApp -->
+    <!-- Open Graph / Facebook / Discord -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sandsxdoom.com/">
     <meta property="og:title" content="Sands X Doom — Site Oficial">
-    <meta property="og:description" content="Explore os mistérios da Pirâmide, criaturas bizarras e a busca de Ivo em Sands X Doom.">
-    <meta property="og:image" content="assets/backgrounds/hero-bg.jpg">
+    <meta property="og:description" content="Subverta a gravidade e adentre os mistérios de uma sociedade secreta na busca pela Avó Imogen.">
+    <meta property="og:image" content="assets/backgrounds/hero_bg.jpg">
 
-    <!-- Favicon Placeholders -->
-    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
-
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Navegação -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <span class="logo-text">SANDS <span class="accent">X</span> DOOM</span>
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu de navegação">
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#intro" class="nav-link">Introdução</a></li>
-                <li><a href="#lore" class="nav-link">Universo</a></li>
-                <li><a href="#characters" class="nav-link">Personagens</a></li>
-                <li><a href="#mechanics" class="nav-link">Mecânicas</a></li>
+    <header class="main-header" id="header">
+        <nav class="nav-container">
+            <a href="#hero" class="nav-logo">SxD</a>
+            <ul class="nav-links">
+                <li><a href="#sobre">O Jogo</a></li>
+                <li><a href="#lore">A Pirâmide</a></li>
+                <li><a href="#personagens">Personagens</a></li>
+                <li><a href="#fases">Jornada</a></li>
+                <li><a href="#controles">Mecânicas</a></li>
             </ul>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <header id="hero" class="hero-section">
-        <div class="hero-bg-overlay"></div>
-        <div class="hero-content">
-            <h1 class="game-title">SANDS <span class="accent-title">X</span> DOOM</h1>
-            <p class="hero-tagline">Atravessar os salões esquecidos é o único caminho para reencontrar quem você ama.</p>
-            <div class="hero-actions">
-                <a href="#intro" class="btn btn-primary">Adentrar a Pirâmide</a>
-                <a href="#characters" class="btn btn-secondary">Conhecer Habitantes</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span class="mouse-icon"></span>
-            <span class="scroll-text">Role para explorar</span>
-        </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
     </header>
 
-    <!-- INTRODUÇÃO -->
-    <section id="intro" class="intro-section">
-        <div class="container">
-            <div class="intro-grid">
-                <div class="intro-text-block">
-                    <span class="section-subtitle">O Desaparecimento</span>
-                    <h2 class="section-title">Três dias de silêncio absoluto.</h2>
-                    <p class="paragraph">
-                        Imogen, a pessoa que Ivo mais ama no mundo, desapareceu sem deixar vestígios. Para encontrá-la e trazê-la de volta para casa, o garoto decide cruzar os portões de uma Pirâmide antiga.
-                    </p>
-                    <p class="paragraph">
-                        O que começa como uma busca desesperada logo se transforma em uma imersão profunda em salões enigmáticos, habitados por criaturas com regras próprias e protegidos por uma sociedade oculta.
-                    </p>
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-content">
+                <img src="assets/logo/logo.png" alt="Logo Oficial Sands X Doom" class="hero-logo" onerror="this.src='https://placehold.co/400x150/0f0b08/d4af37?text=SANDS+X+DOOM'">
+                <p class="hero-tagline">"Dentro da Pirâmide, cada resposta exige uma descida mais profunda ao desconhecido."</p>
+                <div class="hero-cta">
+                    <a href="#personagens" class="btn btn-primary">Conheça os Habitantes</a>
+                    <a href="#sobre" class="btn btn-secondary">Explorar a Pirâmide</a>
                 </div>
-                <div class="intro-visual-card">
-                    <div class="image-frame">
-                        <img src="assets/backgrounds/intro-pyramid.jpg" alt="A entrada sombria da Pirâmide em Sands X Doom" class="responsive-img placeholder-asset">
-                        <div class="frame-caption">A Pirâmide oculta segredos que desafiam a própria gravidade.</div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Role para Explorar</span>
+                <div class="arrow-down"></div>
+            </div>
+        </section>
+
+        <!-- INTRODUÇÃO & SOBRE O JOGO -->
+        <section id="sobre" class="section sobre-section">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="subtitle">Visão Geral</span>
+                    <h2 class="section-title">O Que É Sands X Doom?</h2>
+                </div>
+                <div class="grid-2-col">
+                    <div class="text-block">
+                        <p class="highlight-p">Sands X Doom é um jogo 2D de plataforma, puzzle e exploração, ambientado em uma misteriosa Pirâmide do Egito.</p>
+                        <p>O jogo combina mecânicas específicas em cada fase, exploração detalhada, gerenciamento de recursos e uma atmosfera envolvente marcada pelo terror e pela estranheza.</p>
+                        <p>Na Pirâmide, o cenário é o próprio instrutor. Não há tutoriais tradicionais ostensivos: mecânicas, atalhos e mistérios devem ser compreendidos através do estudo minucioso dos hieróglifos, da observação ambiental e da experimentação direta.</p>
+                    </div>
+                    <div class="visual-card">
+                        <img src="assets/screenshots/gameplay_preview.jpg" alt="Captura de tela do universo de Sands X Doom" onerror="this.src='https://placehold.co/600x400/2a1b12/d4af37?text=SxD+Gameplay+Preview'">
+                        <div class="card-caption">Hieróglifos e construções ancestrais ensinam as regras deste mundo.</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- UNIVERSO / LORE -->
-    <section id="lore" class="lore-section">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-subtitle">A Bíblia da Pirâmide</span>
-                <h2 class="section-title">O Culto e os Rituais Ocultos</h2>
-            </div>
-
-            <div class="lore-cards-container">
-                <!-- Card 1: A Caixa da Avó -->
-                <article class="lore-card">
-                    <div class="lore-card-body">
-                        <span class="lore-badge">A Origem</span>
-                        <h3>A Caixa da Avó</h3>
-                        <p>
-                            Desde pequeno, Ivo esconde o próprio rosto. Enquanto a maioria estranharia esse hábito, sua Avó nunca o reprimiu. Ela foi a única a apoiá-lo e aceitá-lo exatamente como era.
-                        </p>
-                        <p>
-                            Como gesto de gratidão, Ivo construiu para ela uma caixa com rosto de falcão, no mesmo estilo da sua. Imogen a carrega com orgulho — um símbolo vivo da ligação inquebrável entre os dois.
-                        </p>
+        <!-- LORE E UNIVERSO -->
+        <section id="lore" class="section lore-section dark-bg">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="subtitle">O Mistério</span>
+                    <h2 class="section-title">A Sociedade da Pirâmide</h2>
+                </div>
+                
+                <div class="lore-grid">
+                    <div class="lore-card">
+                        <h3>A Busca por Imogen</h3>
+                        <p>Ivo entra na Pirâmide em busca de sua Avó, Imogen, que está desaparecida há três dias. Por ser a pessoa que Ivo mais ama e quem sempre esteve ao seu lado, o desaparecimento motiva uma busca desesperada. O que começa como um resgate logo se transforma em um mergulho profundo pelos corredores esquecidos da antiguidade.</p>
                     </div>
-                </article>
 
-                <!-- Card 2: A Sociedade da Pirâmide -->
-                <article class="lore-card">
-                    <div class="lore-card-body">
-                        <span class="lore-badge">A Seita</span>
-                        <h3>A Sociedade da Pirâmide</h3>
-                        <p>
-                            Escondida dos olhos dos visitantes comuns, existe uma sociedade secreta no interior da Pirâmide que preserva o culto aos antigos deuses egípcios. Seus membros seguem rituais estritos e acreditam que as divindades ainda exercem força sobre aquele lugar.
-                        </p>
+                    <div class="lore-card">
+                        <h3>A Caixa de Papelão</h3>
+                        <p>Desde pequeno, Ivo esconde o próprio rosto. Sua Avó nunca o reprimiu por isso; pelo contrário, foi a única a apoiá-lo incondicionalmente. Mais velho, Ivo construiu uma caixa com rosto de falcão para ela — um símbolo de carinho recíproco e da aceitação daquilo que o torna diferente.</p>
                     </div>
-                </article>
 
-                <!-- Card 3: O Banquete Ritualístico -->
-                <article class="lore-card">
-                    <div class="lore-card-body">
-                        <span class="lore-badge">O Ritual</span>
-                        <h3>O Banquete Ceremonial</h3>
-                        <p>
-                            Grandes banquetes são organizados nos salões profundo. Mas não se engane: a finalidade não é a celebração ou a nutrição dos participantes.
-                        </p>
-                        <p>
-                            A comida, a disposição dos assentos e cada detalhe da arquitetura fazem parte de uma vasta oferenda ritualística dedicada aos deuses cultuados pela sociedade.
-                        </p>
+                    <div class="lore-card">
+                        <h3>A Sociedade Secreta & Os Banquetes</h3>
+                        <p>Nas profundezas da Pirâmide opera uma sociedade secreta que preserva o culto aos antigos deuses egípcios. Seus banquetes cerimoniais não são celebres refeições, mas oferendas rituais onde comida, salão e participantes servem como tributo aos deuses que ainda exercem influência sobre o lugar.</p>
                     </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- PERSONAGENS -->
-    <section id="characters" class="characters-section">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-subtitle">Figuras & Criaturas</span>
-                <h2 class="section-title">Habitantes da Pirâmide</h2>
-                <p class="section-description">Selecione um habitante para inspecionar sua ficha original da Bíblia de Sands X Doom.</p>
-            </div>
-
-            <div class="character-selector-wrapper">
-                <!-- Selector Thumbnails -->
-                <div class="character-thumbs" id="characterThumbs" role="tablist">
-                    <!-- Gerado via JS ou renderizado direto -->
-                    <button class="thumb-btn active" data-char="ivo" role="tab" aria-selected="true">
-                        <span class="thumb-name">Ivo</span>
-                    </button>
-                    <button class="thumb-btn" data-char="sentinela" role="tab" aria-selected="false">
-                        <span class="thumb-name">Sentinela</span>
-                    </button>
-                    <button class="thumb-btn" data-char="nadia" role="tab" aria-selected="false">
-                        <span class="thumb-name">Nadia</span>
-                    </button>
-                    <button class="thumb-btn" data-char="prisma" role="tab" aria-selected="false">
-                        <span class="thumb-name">Prisma</span>
-                    </button>
-                    <button class="thumb-btn" data-char="mumias" role="tab" aria-selected="false">
-                        <span class="thumb-name">Múmias</span>
-                    </button>
-                    <button class="thumb-btn" data-char="imogen" role="tab" aria-selected="false">
-                        <span class="thumb-name">Imogen</span>
-                    </button>
-                </div>
-
-                <!-- Active Character Showcase Box -->
-                <div class="character-display-card" id="characterDisplay">
-                    <!-- O conteúdo é injetado via JS mantendo estritamente o conteúdo da Bíblia -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- MECÂNICAS EM JOGO -->
-    <section id="mechanics" class="mechanics-section">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-subtitle">Sistemas e Interações</span>
-                <h2 class="section-title">Mecânicas da Pirâmide</h2>
-            </div>
+        <!-- SEÇÃO DE PERSONAGENS -->
+        <section id="personagens" class="section personagens-section">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="subtitle">Habitantes & Entidades</span>
+                    <h2 class="section-title">Personagens da Pirâmide</h2>
+                </div>
 
-            <div class="mechanics-grid">
-                <div class="mechanic-card">
-                    <div class="key-badge">Tecla E</div>
-                    <h3>Inversão de Gravidade</h3>
-                    <p>Ivo utiliza ampulhetas especiais espalhadas pelos cenários para inverter a gravidade e transitar pelo teto dos salões.</p>
+                <!-- Seletor de Personagens -->
+                <div class="character-selector" id="characterSelector">
+                    <button class="char-tab active" data-target="char-ivo">Ivo</button>
+                    <button class="char-tab" data-target="char-imogen">Imogen</button>
+                    <button class="char-tab" data-target="char-sentinela">Sentinela</button>
+                    <button class="char-tab" data-target="char-nadia">Nadia</button>
+                    <button class="char-tab" data-target="char-prisma">Prisma</button>
+                    <button class="char-tab" data-target="char-mumias">Múmias</button>
                 </div>
-                <div class="mechanic-card">
-                    <div class="key-badge">Tecla C</div>
-                    <h3>Miado Aleatório</h3>
-                    <p>Ivo solta um miado aleatório, refletindo seus hábitos e trejeitos felinos.</p>
-                </div>
-                <div class="mechanic-card">
-                    <div class="key-badge">Tecla Q</div>
-                    <h3>Libertação em Jarro</h3>
-                    <p>Ao encostar em um jarro e pressionar Q, Ivo abre a tampa e solta uma Nadia, que sobe em linha reta verticalmente para rachar blocos superiores com seu veneno.</p>
+
+                <!-- Painel de Exibição do Personagem Ativo -->
+                <div class="character-display" id="characterDisplay">
+
+                    <!-- IVO -->
+                    <div class="char-profile active" id="char-ivo">
+                        <div class="char-media">
+                            <img src="assets/characters/ivo.png" alt="Ivo" onerror="this.src='https://placehold.co/400x500/1c120c/c28251?text=Ivo'">
+                        </div>
+                        <div class="char-details">
+                            <div class="char-header">
+                                <h3 class="char-name">Ivo</h3>
+                                <span class="char-badge">Protagonista</span>
+                            </div>
+                            <p class="char-desc">Ivo é o protagonista do jogo, personagem na qual o jogador controla. Desde bebê, Ivo esconde seu rosto com alguma coisa.</p>
+                            
+                            <div class="char-specs">
+                                <h4>Características Físicas</h4>
+                                <ul>
+                                    <li><strong>Idade:</strong> 11 anos</li>
+                                    <li><strong>Cabelo:</strong> Cabelo longo</li>
+                                    <li><strong>Pele:</strong> Bronzeada</li>
+                                    <li><strong>Comportamento:</strong> Possui trejeitos de felino</li>
+                                </ul>
+                            </div>
+
+                            <div class="char-specs">
+                                <h4>Mecânica em Jogo</h4>
+                                <ul>
+                                    <li><strong>Tecla E:</strong> Usa de ampulhetas para inverter sua gravidade.</li>
+                                    <li><strong>Tecla C:</strong> Solta um miado aleatório.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IMOGEN -->
+                    <div class="char-profile" id="char-imogen">
+                        <div class="char-media">
+                            <img src="assets/characters/imogen.png" alt="Imogen (Avó de Ivo)" onerror="this.src='https://placehold.co/400x500/1c120c/c28251?text=Imogen'">
+                        </div>
+                        <div class="char-details">
+                            <div class="char-header">
+                                <h3 class="char-name">Imogen</h3>
+                                <span class="char-badge">Avó de Ivo</span>
+                            </div>
+                            <p class="char-desc">Ela é a peça central do jogo. Ivo entra na Pirâmide por conta dela.</p>
+                            
+                            <div class="char-specs">
+                                <h4>Características Físicas</h4>
+                                <ul>
+                                    <li><strong>Idade:</strong> Possui mais de 67 anos</li>
+                                    <li><strong>Máscara:</strong> Usa uma caixa com rosto de falcão, similar à de Ivo</li>
+                                    <li><strong>Acessórios:</strong> Usa óculos redondos</li>
+                                    <li><strong>Cabelos:</strong> Cabelos brancos e de tamanho mediano</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SENTINELA -->
+                    <div class="char-profile" id="char-sentinela">
+                        <div class="char-media">
+                            <img src="assets/characters/sentinela.png" alt="Sentinela (Alarminho)" onerror="this.src='https://placehold.co/400x500/1c120c/c28251?text=Sentinela'">
+                        </div>
+                        <div class="char-details">
+                            <div class="char-header">
+                                <h3 class="char-name">Sentinela</h3>
+                                <span class="char-badge">Apelido: Alarminho</span>
+                            </div>
+                            <p class="char-desc">Alarminho é um apelido dado por Ivo aos sentinelas com base em sua função. Sentinelas são crocodilos anões medrosos e paranoicos, que entram em desespero e gritam com qualquer coisa. Além disso, são alarmes de segurança biológicos da Pirâmide.</p>
+                            
+                            <div class="char-specs">
+                                <h4>Mecânica em Jogo</h4>
+                                <p>Quando Ivo se aproxima de um sentinela, ele grita, ativando o bloco de flecha mais próximo, fazendo-o disparar uma flecha.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NADIA -->
+                    <div class="char-profile" id="char-nadia">
+                        <div class="char-media">
+                            <img src="assets/characters/nadia.png" alt="Nadia" onerror="this.src='https://placehold.co/400x500/1c120c/c28251?text=Nadia'">
+                        </div>
+                        <div class="char-details">
+                            <div class="char-header">
+                                <h3 class="char-name">Nadia</h3>
+                                <span class="char-badge">Habitante dos Jarros</span>
+                            </div>
+                            <p class="char-desc">Nadias são cobras com sérios problemas de controle emocional e impaciência. Vivem em jarros e a coisa que mais detestam é serem acordadas ou terem sua privacidade violada.</p>
+                            
+                            <div class="char-specs">
+                                <h4>Mecânica em Jogo</h4>
+                                <p>Quando Ivo encosta em um jarro e pressiona a tecla <strong>Q</strong>, ele abre o jarro, fazendo a Nadia que estava lá dentro sair e subir em linha reta verticalmente. Quando a Nadia encosta em um bloco, ela o racha com seu veneno, fazendo-o poder ser destruído com uma flecha de blocos de flecha.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PRISMA -->
+                    <div class="char-profile" id="char-prisma">
+                        <div class="char-media">
+                            <img src="assets/characters/prisma.png" alt="Prisma" onerror="this.src='https://placehold.co/400x500/1c120c/c28251?text=Prisma'">
+                        </div>
+                        <div class="char-details">
+                            <div class="char-header">
+                                <h3 class="char-name">Prisma</h3>
+                                <span class="char-badge">Espelho-Escaravelho</span>
+                            </div>
+                            <p class="char-desc">Prismas são Espelhos-Escaravelhos, basicamente besouros com espelhos nos lugares das asas. Estão sempre parados sonhando e imaginando um futuro melhor, mas nunca concretizam nenhum de seus sonhos, talvez pelo peso em suas costas...</p>
+                            
+                            <div class="char-specs">
+                                <h4>Mecânica em Jogo</h4>
+                                <p>Sempre que uma flecha encosta em algum de seus espelhos, ela é refletida.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MÚMIAS -->
+                    <div class="char-profile" id="char-mumias">
+                        <div class="char-media">
+                            <img src="assets/characters/mumias.png" alt="Múmias" onerror="this.src='https://placehold.co/400x500/1c120c/c28251?text=Múmias'">
+                        </div>
+                        <div class="char-details">
+                            <div class="char-header">
+                                <h3 class="char-name">Múmias</h3>
+                                <span class="char-badge">Obstáculo Mortal</span>
+                            </div>
+                            <p class="char-desc">São seres tão tímidos, vivem constantemente dentro das paredes, mas estão sempre dispostas para um abraço. Pena que devido às suas más habilidades sociais, quase sempre resulta em velório — o que não é novidade para elas.</p>
+                            
+                            <div class="char-specs">
+                                <h4>Mecânica em Jogo</h4>
+                                <p>Múmias são basicamente os espinhos de SxD, são obstáculos que se Ivo encostar, morre.</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- ROADMAP DE FASES -->
+        <section id="fases" class="section fases-section dark-bg">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="subtitle">Evolução do Gameplay</span>
+                    <h2 class="section-title">Roadmap das Fases</h2>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Puzzles</h3>
+                            <p>Introdução gradual às dinâmicas de gravidade e interação com o cenário.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Necrotério</h3>
+                            <p>Fase de parkour com sarcófagos e presença ostensiva de Múmias. Inclui uma mecânica de perseguição: uma montanha gigante de Múmias sobe pelo cenário acompanhada pelo desmoronamento do ambiente.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Biblioteca</h3>
+                            <p>Região de transição narrativa e contemplativa entre etapas de gameplay mais intensas.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Corredores / Puzzles</h3>
+                            <p>Aprofundamento de desafios mecânicos e exploração da arquitetura da Pirâmide.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Banquete</h3>
+                            <p>Fase de gerenciamento vertical com 3 andares e elevadores-sarcófago retrô estilo anos 80. Ivo atua como garçom servindo Pato, Pão, Cerveja e Frutas aos convidados dentro do tempo estipulado.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h3>Jardim de Lótus</h3>
+                            <p>Ponto de respiro atmosférico com estética Frutiger Aero. Apresenta a mecânica relaxante de Manutenção do Jardim (regar plantas, adubar, cuidar da água) e presença de Gatos Ciclopes.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">7</div>
+                        <div class="step-content">
+                            <h3>Mais Corredores / Puzzles</h3>
+                            <p>Últimos e mais complexos testes antes da resolução dos mistérios.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">8</div>
+                        <div class="step-content">
+                            <h3>Final</h3>
+                            <p>Encontro marcante no desfecho da jornada na Pirâmide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTROLES & MECÂNICAS -->
+        <section id="controles" class="section controles-section">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="subtitle">Guia de Interação</span>
+                    <h2 class="section-title">Controles Planejados</h2>
+                </div>
+
+                <div class="controls-grid">
+                    <div class="key-card">
+                        <kbd>A</kbd> <kbd>D</kbd>
+                        <span>Movimentação Horizontal</span>
+                    </div>
+                    <div class="key-card">
+                        <kbd>Espaço</kbd>
+                        <span>Pulo</span>
+                    </div>
+                    <div class="key-card">
+                        <kbd>E</kbd>
+                        <span>Inverter Gravidade (Ampulhetas)</span>
+                    </div>
+                    <div class="key-card">
+                        <kbd>Q</kbd>
+                        <span>Interagir (Ex: Abrir Jarros de Nadia)</span>
+                    </div>
+                    <div class="key-card">
+                        <kbd>C</kbd>
+                        <span>Miado Aleatório de Ivo</span>
+                    </div>
+                    <div class="key-card">
+                        <kbd>G</kbd>
+                        <span>Pegar Prato (Banquete)</span>
+                    </div>
+                    <div class="key-card">
+                        <kbd>M</kbd>
+                        <span>Destruir Prato Carregado</span>
+                    </div>
+                    <div class="key-card">
+                        <kbd>O</kbd> <kbd>P</kbd>
+                        <span>Subir / Descer Elevadores-Sarcófagos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer class="site-footer">
+    <footer class="main-footer">
         <div class="container footer-content">
-            <div class="footer-brand">
-                <h2>SANDS <span class="accent">X</span> DOOM</h2>
-                <p>Inspirado na Bíblia Audiovisual do Projeto. Todos os direitos reservados.</p>
+            <div class="footer-info">
+                <h3>Sands X Doom</h3>
+                <p>Uma experiência independente de plataforma, puzzle e mistério egípcio.</p>
             </div>
-            <div class="footer-status">
-                <span class="status-indicator"></span> Projeto Independente em Desenvolvimento
+            <div class="footer-links">
+                <p>&copy; 2026 Sands X Doom. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
