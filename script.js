@@ -1,5 +1,5 @@
 /**
- * SANDS X DOOM (SxD) - REFORMULATED ENGINE WITH OFFICIAL ASSETS
+ * SANDS X DOOM (SxD) - REFORMULATED ENGINE (OPÇÃO 2: RAIZ DO PROJETO)
  * Fonte de Lore: Bíblia Audiovisual de Sands X Doom
  */
 
@@ -7,11 +7,11 @@ const CHARACTERS_DATA = {
     ivo: {
         name: "Ivo",
         subtitle: "O Protagonista",
-        image: "assets/characters/ivo.png",
+        image: "ivo.png",
         sections: [
             {
-                title: "Descrição Narrative & Lore",
-                content: "Ivo é o protagonista do jogo, personagem na qual o jogador controla. Desde bebê, Ivo esconde seu rosto com alguma coisa."
+                title: "Descrição Narrativa & Lore",
+                content: "Ivo é o protagonista do jogo, personagem no qual o jogador controla. Desde bebê, Ivo esconde seu rosto com alguma coisa."
             },
             {
                 title: "Características Físicas",
@@ -34,11 +34,11 @@ const CHARACTERS_DATA = {
     sentinela: {
         name: "Sentinela",
         subtitle: "Apelido: Alarminho",
-        image: "assets/characters/sentinela.png",
+        image: "sentinela.png",
         sections: [
             {
-                title: "Descrição Narrative",
-                content: "Alarminho é um apelido dado por Ivo aos sentinelas com base em sua função. Sentinelas são crocodilos anões medrosos e paranoicos, que entram em desespero e gritando com qualquer coisa. Além disso, são alarmes de segurança biológicos da Pirâmide."
+                title: "Descrição Narrativa",
+                content: "Alarminho é um apelido dado por Ivo aos sentinelas com base em sua função. Sentinelas são crocodilos anões medrosos e paranoicos, que entram em desespero gritando com qualquer coisa. Além disso, são alarmes de segurança biológicos da Pirâmide."
             },
             {
                 title: "Mecânica em Jogo",
@@ -49,10 +49,10 @@ const CHARACTERS_DATA = {
     nadia: {
         name: "Nadia",
         subtitle: "Habitante dos Jarros",
-        image: "assets/characters/nadia.png",
+        image: "nadia.png",
         sections: [
             {
-                title: "Descrição Narrative",
+                title: "Descrição Narrativa",
                 content: "Nadias são cobras com sérios problemas de controle emocional e impaciência. Vivem em jarros e a coisa que mais detestam é serem acordadas ou terem sua privacidade violada."
             },
             {
@@ -64,10 +64,10 @@ const CHARACTERS_DATA = {
     prisma: {
         name: "Prisma",
         subtitle: "Espelhos-Escaravelhos",
-        image: "assets/characters/prisma.png",
+        image: "prisma.png",
         sections: [
             {
-                title: "Descrição Narrative",
+                title: "Descrição Narrativa",
                 content: "Prismas são Espelhos-Escaravelhos, basicamente besouros com espelhos nos lugares das asas. Estão sempre parados sonhando e imaginando um futuro melhor, mas nunca concretizam nenhum de seus sonhos, talvez pelo peso em suas costas…"
             },
             {
@@ -79,11 +79,11 @@ const CHARACTERS_DATA = {
     mumias: {
         name: "Múmias",
         subtitle: "Habitantes das Paredes",
-        image: "assets/characters/mumias.png",
+        image: "mumias.png",
         sections: [
             {
-                title: "Descrição Narrative",
-                content: "São seres tão tímidos, vivem constantemente dentro das paredes, mas estão sempre dispostas para um abraço. Pena que devido às suas más habilidades sociais, quase sempre resulta em velório - o que não é novidade para elas."
+                title: "Descrição Narrativa",
+                content: "São seres tão tímidos que vivem constantemente dentro das paredes, mas estão sempre dispostos para um abraço. Pena que devido às suas más habilidades sociais, quase sempre resulta em velório - o que não é novidade para elas."
             },
             {
                 title: "Mecânica em Jogo",
@@ -94,7 +94,7 @@ const CHARACTERS_DATA = {
     imogen: {
         name: "Imogen",
         subtitle: "Avó de Ivo",
-        image: "assets/characters/imogen.png",
+        image: "imogen.png",
         sections: [
             {
                 title: "Papel na História",

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SANDS X DOOM (SxD) - STYLESHEET REFORMULADO COM ASSETS OFICIAIS
+   SANDS X DOOM (SxD) - STYLESHEET REFORMULADO (OPÇÃO 2: RAIZ DO PROJETO)
    ========================================================================== */
 
 /* 1. RESET & VARIÁVEIS GLOBAIS */
@@ -264,7 +264,7 @@ button {
     color: var(--color-text-muted);
 }
 
-/* DIVISOR DE CENÁRIO REPETÍVEL (SPRITE VARANDA E CHÃO) */
+/* DIVISOR DE CENÁRIO REPETÍVEL (IMAGENS NA RAIZ) */
 .tile-divider {
     height: 48px;
     width: 100%;
