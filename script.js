@@ -1,94 +1,206 @@
 /**
- * SANDS X DOOM (SxD) - LÓGICA E INTERATIVIDADE
+ * SANDS X DOOM (SxD) - REFORMULATED ENGINE WITH OFFICIAL ASSETS
+ * Fonte de Lore: Bíblia Audiovisual de Sands X Doom
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-    initHeaderScroll();
-    initMobileNav();
-    initCharacterSelector();
-    initSmoothScroll();
+const CHARACTERS_DATA = {
+    ivo: {
+        name: "Ivo",
+        subtitle: "O Protagonista",
+        image: "assets/characters/ivo.png",
+        sections: [
+            {
+                title: "Descrição Narrative & Lore",
+                content: "Ivo é o protagonista do jogo, personagem na qual o jogador controla. Desde bebê, Ivo esconde seu rosto com alguma coisa."
+            },
+            {
+                title: "Características Físicas",
+                list: [
+                    "11 anos",
+                    "Possui cabelo longo",
+                    "Pele bronzeada",
+                    "Possui trejeitos de felino"
+                ]
+            },
+            {
+                title: "Mecânica em Jogo",
+                list: [
+                    "Ao apertar E, Ivo usa de ampulhetas para inverter sua gravidade.",
+                    "Ao apertar C, Ivo solta um miado aleatório."
+                ]
+            }
+        ]
+    },
+    sentinela: {
+        name: "Sentinela",
+        subtitle: "Apelido: Alarminho",
+        image: "assets/characters/sentinela.png",
+        sections: [
+            {
+                title: "Descrição Narrative",
+                content: "Alarminho é um apelido dado por Ivo aos sentinelas com base em sua função. Sentinelas são crocodilos anões medrosos e paranoicos, que entram em desespero e gritando com qualquer coisa. Além disso, são alarmes de segurança biológicos da Pirâmide."
+            },
+            {
+                title: "Mecânica em Jogo",
+                content: "Quando Ivo se aproxima de um sentinela, ele grita, ativando o bloco de flecha mais próximo, fazendo-o disparar uma flecha."
+            }
+        ]
+    },
+    nadia: {
+        name: "Nadia",
+        subtitle: "Habitante dos Jarros",
+        image: "assets/characters/nadia.png",
+        sections: [
+            {
+                title: "Descrição Narrative",
+                content: "Nadias são cobras com sérios problemas de controle emocional e impaciência. Vivem em jarros e a coisa que mais detestam é serem acordadas ou terem sua privacidade violada."
+            },
+            {
+                title: "Mecânica em Jogo",
+                content: "Quando Ivo encosta em um jarro e pressiona a tecla Q, ele abre o jarro, fazendo a Nadia que estava lá dentro sair e subir em linha reta verticalmente. Quando a Nadia encosta em um bloco, ela o racha com seu veneno, fazendo-o poder ser destruído com uma flecha de blocos de flecha."
+            }
+        ]
+    },
+    prisma: {
+        name: "Prisma",
+        subtitle: "Espelhos-Escaravelhos",
+        image: "assets/characters/prisma.png",
+        sections: [
+            {
+                title: "Descrição Narrative",
+                content: "Prismas são Espelhos-Escaravelhos, basicamente besouros com espelhos nos lugares das asas. Estão sempre parados sonhando e imaginando um futuro melhor, mas nunca concretizam nenhum de seus sonhos, talvez pelo peso em suas costas…"
+            },
+            {
+                title: "Mecânica em Jogo",
+                content: "Sempre que uma flecha encosta em algum de seus espelhos, ela é refletida."
+            }
+        ]
+    },
+    mumias: {
+        name: "Múmias",
+        subtitle: "Habitantes das Paredes",
+        image: "assets/characters/mumias.png",
+        sections: [
+            {
+                title: "Descrição Narrative",
+                content: "São seres tão tímidos, vivem constantemente dentro das paredes, mas estão sempre dispostas para um abraço. Pena que devido às suas más habilidades sociais, quase sempre resulta em velório - o que não é novidade para elas."
+            },
+            {
+                title: "Mecânica em Jogo",
+                content: "Múmias são basicamente os espinhos de SxD, são obstáculos que se Ivo encostar, morre."
+            }
+        ]
+    },
+    imogen: {
+        name: "Imogen",
+        subtitle: "Avó de Ivo",
+        image: "assets/characters/imogen.png",
+        sections: [
+            {
+                title: "Papel na História",
+                content: "Ela é a peça central do jogo. Ivo entra na Pirâmide por conta dela."
+            },
+            {
+                title: "Características Físicas",
+                list: [
+                    "Possui mais de 67 anos",
+                    "Usa uma caixa com rosto de falcão, similar à de Ivo",
+                    "Usa óculos redondos",
+                    "Possui cabelos brancos e de tamanho mediano"
+                ]
+            }
+        ]
+    }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    initNavbar();
+    initCharacterSystem();
 });
 
-/**
- * Altera estilo do Header ao rolar a página
- */
-function initHeaderScroll() {
-    const header = document.getElementById('header');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
+function initNavbar() {
+    const navbar = document.getElementById("navbar");
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 40) {
+            navbar.classList.add("scrolled");
         } else {
-            header.classList.remove('scrolled');
+            navbar.classList.remove("scrolled");
         }
     });
-}
 
-/**
- * Menu Hamburguer para Mobile
- */
-function initMobileNav() {
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (navToggle && navLinks) {
-        navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Fechar ao clicar em um link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
+    if (navToggle) {
+        navToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
         });
     }
 }
 
-/**
- * Sistema de Troca de Personagens (Tabs)
- */
-function initCharacterSelector() {
-    const tabs = document.querySelectorAll('.char-tab');
-    const profiles = document.querySelectorAll('.char-profile');
+function initCharacterSystem() {
+    const thumbs = document.querySelectorAll(".thumb-btn");
+    const displayContainer = document.getElementById("characterDisplay");
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const targetId = tab.getAttribute('data-target');
+    renderCharacter("ivo", displayContainer);
 
-            // Atualiza estado ativo das abas
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-
-            // Exibe o perfil correspondente
-            profiles.forEach(profile => {
-                if (profile.id === targetId) {
-                    profile.classList.add('active');
-                } else {
-                    profile.classList.remove('active');
-                }
+    thumbs.forEach(btn => {
+        btn.addEventListener("click", () => {
+            thumbs.forEach(t => {
+                t.classList.remove("active");
+                t.setAttribute("aria-selected", "false");
             });
+
+            btn.classList.add("active");
+            btn.setAttribute("aria-selected", "true");
+
+            const charKey = btn.getAttribute("data-char");
+            renderCharacter(charKey, displayContainer);
         });
     });
 }
 
-/**
- * Scroll Suave Seguro
- */
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+function renderCharacter(key, container) {
+    const char = CHARACTERS_DATA[key];
+    if (!char) return;
 
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+    container.style.opacity = "0";
+
+    setTimeout(() => {
+        let sectionsHTML = "";
+
+        char.sections.forEach(sec => {
+            sectionsHTML += `<div class="char-section-block">
+                <h4>${sec.title}</h4>`;
+            
+            if (sec.content) {
+                sectionsHTML += `<p>${sec.content}</p>`;
             }
+
+            if (sec.list && sec.list.length > 0) {
+                sectionsHTML += `<ul>`;
+                sec.list.forEach(item => {
+                    sectionsHTML += `<li>${item}</li>`;
+                });
+                sectionsHTML += `</ul>`;
+            }
+
+            sectionsHTML += `</div>`;
         });
-    });
+
+        container.innerHTML = `
+            <div class="char-portrait-box">
+                <img src="${char.image}" alt="${char.name}" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\\'color:#a09283; font-size:0.8rem; text-align:center;\\'>[ Sprite: ${char.name} ]</div>';">
+            </div>
+            <div class="char-details">
+                <div class="char-header">
+                    <h3>${char.name}</h3>
+                    <span class="char-subtitle">${char.subtitle}</span>
+                </div>
+                ${sectionsHTML}
+            </div>
+        `;
+
+        container.style.opacity = "1";
+    }, 150);
 }
