@@ -1,6 +1,6 @@
 /**
- * SANDS X DOOM (SxD) - REFORMULATED ENGINE (OPÇÃO 2: RAIZ DO PROJETO)
- * Fonte de Lore: Bíblia Audiovisual de Sands X Doom
+ * SANDS X DOOM (SxD) - REFORMULATED ENGINE
+ * Mantendo caminhos na raiz do projeto.
  */
 
 const CHARACTERS_DATA = {
@@ -190,7 +190,7 @@ function renderCharacter(key, container) {
 
         container.innerHTML = `
             <div class="char-portrait-box">
-                <img src="${char.image}" alt="${char.name}" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\\'color:#a09283; font-size:0.8rem; text-align:center;\\'>[ Sprite: ${char.name} ]</div>';">
+                <img src="${char.image}" alt="${char.name}" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\\'color:#cbb9af; font-size:0.8rem; text-align:center;\\'>[ Sprite: ${char.name} ]</div>';">
             </div>
             <div class="char-details">
                 <div class="char-header">
